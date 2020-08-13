@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageId>LKMecha.Simulation</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Luke Kaalim</Authors>
+    <Product>Game</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="State.fs" />
+    <Compile Include="Game.fs" />
+  </ItemGroup>
+
+</Project>
