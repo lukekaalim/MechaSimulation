@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>LKMecha.Simulation</PackageId>
     <Version>0.1.0</Version>
@@ -11,8 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="State.fs" />
-    <Compile Include="Game.fs" />
+    <Compile Include="Vector2D.fs" />
+    <Compile Include="Mecha.fs" />
+    <Compile Include="Actions.fs" />
+    <Compile Include="World.fs" />
   </ItemGroup>
 
 </Project>
