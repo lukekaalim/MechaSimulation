@@ -28,8 +28,8 @@ namespace UnitTestProject1
 			Assert.AreEqual(Trig.Sine(16), 0);
 			Assert.AreEqual(Trig.Sine(8), 0);
 			Assert.AreEqual(Trig.Sine(0), 0);
-			Assert.AreEqual(Trig.Sine(4), 1);
-			Assert.AreEqual(Trig.Sine(12), 1);
+			Assert.AreEqual(Trig.Sine(4), 1000);
+			Assert.AreEqual(Trig.Sine(12), 1000);
 		}
 	}
 }
