@@ -21,5 +21,15 @@ namespace UnitTestProject1
 
 			Assert.AreEqual(worldAfterMoving.mechas[alphaMecha.id].position.x, 10);
 		}
+
+		[TestMethod]
+		public void TestSineLookup()
+		{
+			Assert.AreEqual(Trig.Sine(16), 0);
+			Assert.AreEqual(Trig.Sine(8), 0);
+			Assert.AreEqual(Trig.Sine(0), 0);
+			Assert.AreEqual(Trig.Sine(4), 1);
+			Assert.AreEqual(Trig.Sine(12), 1);
+		}
 	}
 }

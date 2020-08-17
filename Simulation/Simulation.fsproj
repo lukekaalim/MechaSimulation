@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Trig.fs" />
     <Compile Include="Vector2D.fs" />
     <Compile Include="Mecha.fs" />
     <Compile Include="Actions.fs" />
