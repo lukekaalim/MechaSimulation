@@ -25,11 +25,16 @@ namespace UnitTestProject1
 		[TestMethod]
 		public void TestSineLookup()
 		{
-			Assert.AreEqual(Trig.Sine(16), 0);
+			Assert.AreEqual(Trig.Sine(-16), 0);
+			Assert.AreEqual(Trig.Sine(Trig.Tau), 0);
+			Assert.AreEqual(Trig.Sine(32), 0);
 			Assert.AreEqual(Trig.Sine(8), 0);
 			Assert.AreEqual(Trig.Sine(0), 0);
 			Assert.AreEqual(Trig.Sine(4), 1000);
-			Assert.AreEqual(Trig.Sine(12), 1000);
+			Assert.AreEqual(Trig.Sine(12), -1000);
+
+			Assert.AreEqual(Trig.Cos(0), 1000);
+			Assert.AreEqual(Trig.Cos(Trig.Pi), -1000);
 		}
 	}
 }

@@ -25,11 +25,12 @@ let MapToInvertedQuadrant x = (-1 * (MapToQuadrantSpace x)) + QuadrentLength
 let Negate x = -x
 
 let MapToSineQuadrant x =
-  match (x / QuadrentLength) with
+  match abs (x / QuadrentLength) with
     | 0 -> x |> MapToLookupSineArray
     | 1 -> x |> MapToInvertedQuadrant |> MapToLookupSineArray
     | 2 -> x |> MapToSemiSpace |> MapToLookupSineArray |> Negate
     | 3 -> x |> MapToSemiSpace |> MapToInvertedQuadrant |> MapToLookupSineArray |> Negate
 
 let Sine x = x |> MapToSineRange |> MapToSineQuadrant
+let Cos x = (x + QuadrentLength) |> MapToSineRange |> MapToSineQuadrant
     
