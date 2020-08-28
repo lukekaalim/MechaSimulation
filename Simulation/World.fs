@@ -25,4 +25,3 @@ let Dispatch world action =
   match action with
     | Actions.SpawnMecha(action) -> { world with mechas = world.mechas.Add(action.mecha.id, action.mecha) }
     | Actions.DriveMecha(action) -> { world with mechas = world.mechas.Add(action.id, { world.mechas.[action.id] with velocity = action.velocity }) }
-    | _ -> world

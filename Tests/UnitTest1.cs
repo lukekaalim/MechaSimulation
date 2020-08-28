@@ -21,20 +21,18 @@ namespace UnitTestProject1
 
 			Assert.AreEqual(worldAfterMoving.mechas[alphaMecha.id].position.x, 10);
 		}
-
+		
 		[TestMethod]
-		public void TestSineLookup()
-		{
-			Assert.AreEqual(Trig.Sine(-16), 0);
-			Assert.AreEqual(Trig.Sine(Trig.Tau), 0);
-			Assert.AreEqual(Trig.Sine(32), 0);
-			Assert.AreEqual(Trig.Sine(8), 0);
-			Assert.AreEqual(Trig.Sine(0), 0);
-			Assert.AreEqual(Trig.Sine(4), 1000);
-			Assert.AreEqual(Trig.Sine(12), -1000);
+		public void TestPhysics() {
+			var particleA = new Physics.Particle1D(0, 1, 0);
+			var particleB = new Physics.Particle1D(10, -1, 0);
 
-			Assert.AreEqual(Trig.Cos(0), 1000);
-			Assert.AreEqual(Trig.Cos(Trig.Pi), -1000);
+			var collision = Physics.GetCollision1D(particleA, particleB);
+
+			Assert.IsTrue(collision.IsHit);
+			Assert.IsFalse(collision.IsMiss);
+			Assert.AreEqual((collision as Physics.Collision1DResult.Hit).entry, 5);
+			Assert.AreEqual((collision as Physics.Collision1DResult.Hit).exit, 5);
 		}
 	}
 }
